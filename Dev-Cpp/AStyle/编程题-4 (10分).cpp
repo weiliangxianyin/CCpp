@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+	for(int n=1000;; n++) {
+		int t=pow(n%10,4)+pow((n/10)%10,4)+pow(((n/100)%10),4)+pow(n/1000,4);
+		if(t==n) {
+			printf("%d",n);
+			break;
+
+		}
+
+
+	}
+
+
+
+	return 0;
+}

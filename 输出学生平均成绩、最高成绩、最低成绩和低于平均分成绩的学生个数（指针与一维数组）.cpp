@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(void) {
+	int n;
+	scanf("%d",&n);
+	double ave,a[n],sum=0;
+	int i;
+	for(i=0; i<n; i++) {
+		scanf("%lf",a+i);
+		sum+=a[i];
+
+	}
+	ave=sum/n;
+	int cou=0;
+	double max=*a,min=*a;
+	for(i=0; i<n; i++) {
+		max=max>*(a+i)?max:*(a+i);
+		min=min<*(a+i)?min:*(a+i);
+		if(*(a+i)<ave)cou++;
+	}
+	printf("average=%.2lf\nmax=%.2lf\nmin=%.2lf\ncount=%d\n",ave,max,min,cou);
+	return 0;
+}

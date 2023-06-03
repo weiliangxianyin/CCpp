@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(void){
+	int year;
+	scanf("%d",&year);
+	int t;
+	t=2019-year;
+	if(18<=t&&t<=35){
+		printf("Youth");
+	}
+	else if(35<t&&t<50){
+		printf("Middle-aged");
+	}
+	else if(t>=50){
+		printf("Old");
+	}
+	else if(t<18){
+		printf("Invalid Value!");
+	}
+	return 0;
+}

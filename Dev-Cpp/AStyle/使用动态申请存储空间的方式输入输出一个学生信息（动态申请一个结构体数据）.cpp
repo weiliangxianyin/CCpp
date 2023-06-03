@@ -1,0 +1,13 @@
+#include <stdio.h>
+struct student {
+	int num;
+	char name[20];
+	int score;
+};
+int main(void) {
+	struct student a1;
+	scanf("%d %s %d",&a1.num,&a1.name,&a1.score);
+	printf("%d %s %d",a1.num,a1.name,a1.score);
+
+	return 0;
+}

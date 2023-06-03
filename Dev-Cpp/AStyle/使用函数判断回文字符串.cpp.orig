@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#define MAXN 20
+int palindrome( char *s ){
+	int i;
+	int n=strlen(s);
+	for(i=0;i<n/2;i++){
+		if(s[i]!=s[n-1-i]){
+			return 0;
+			break;
+		}
+	}
+	return 1;
+}
+
+int main()
+{
+    char s[MAXN];
+
+    scanf("%s", s);
+    if ( palindrome(s)==1 )
+        printf("Yes\n");
+    else
+        printf("No\n");
+    printf("%s\n", s);
+
+    return 0;
+}

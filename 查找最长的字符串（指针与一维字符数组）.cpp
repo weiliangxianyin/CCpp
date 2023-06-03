@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int main(void) {
+	int n;
+	scanf("%d\n",&n);
+	char a[n][80];
+	int i;
+	for(i=0; i<n; i++) {
+		gets(a[i]);
+	}
+	int lon=strlen(a[0]),k;
+	for(i=0; i<n; i++) {
+		if(strlen(a[i])>lon) {
+			lon=strlen(a[i]);
+			k=i;
+		}
+	}
+
+	printf("The longest is: ");
+	puts(a[k]);
+	return 0;
+}

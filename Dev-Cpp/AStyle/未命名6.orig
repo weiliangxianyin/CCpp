@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main(void)
+
+{
+
+  int i,j;
+                            
+
+  for(i=0;i<=9;i++)  
+
+   {
+
+    j=i*10+6;
+                    
+
+      s=s+j;
+
+    }
+
+printf("%d\n",s);
+
+return 0;
+
+}

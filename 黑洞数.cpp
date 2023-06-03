@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main(void) {
+	int n;
+	scanf("%d",&n);
+	int a,b,c,t,x,y,z,v=1;
+	int sum=0;
+	do {
+		a=n/100;
+		b=n/10%10;
+		c=n%10;
+		x=a,y=b,z=c;
+		a=a<b?a:b;
+		a=a<c?a:c;
+		c=c>b?c:b;
+		c=c>x?c:x;
+		b=x<y?x:y;
+		t=y<z?y:z;
+		b=x>t?x:t;
+		int max,min;
+		max=c*100+b*10+a;
+		min=a*100+b*10+c;
+		sum=max-min;
+		n=sum;
+		printf("%d: %d - %d = %d\n",v,max,min,sum);
+		v++;
+		if(sum==495)break;
+	} while(v>=0);
+	return 0;
+}

@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+void f(char a[]) {
+	int i=0;	
+	for(; i<strlen(a); i++) {
+		if(97<=*(a+i)&&*(a+i)<=122){
+			*(a+i)=*(a+i)-32;
+		}
+	}
+}
+int main(void) {
+	char a[81];
+	gets(a);
+	f(&a[0]);
+	puts(a);
+	return 0;
+}

@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#define N 10
+struct student {
+	int num;
+	char name[10];
+	int age;
+	char sex;
+	char major[30];
+	float math,english,computer;
+};
+int main() {
+	struct student students[N];
+	int n;
+	printf("请输入学生数量：");
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		printf("请输入第%d个学生的信息（学号、姓名、年龄、性别、专业、高数成绩、英语成绩、计算机成绩）：\n", i + 1);
+		scanf("%d %s %d %c %s %f %f %f", &students[i].num, students[i].name, &students[i].age, &students[i].sex, students[i].major, &students[i].math, &students[i].english, &students[i].computer);
+	}
+	int max_index = 0, min_index = 0;
+	for (int i = 1; i < n; i++) {
+		if (students[i].math + students[i].english + students[i].computer > students[max_index].math + students[max_index].english + students[max_index].computer)
+			max_index = i;
+		if (students[i].math + students[i].english + students[i].computer < students[min_index].math + students[min_index].english + students[min_index].computer)
+			min_index = i;
+	}
+	printf("总分最高的学生信息：\n");
+	printf("%d %s %d %c %s %.2f %.2f %.2f\n", students[max_index].num, students[max_index].name, students[max_index].age, students[max_index].sex, students[max_index].major, students[max_index].math, students[max_index].english, students[max_index].computer);
+	printf("总分最低的学生信息：\n");
+	printf("%d %s %d %c %s %.2f %.2f %.2f\n", students[min_index].num, students[min_index].name, students[min_index].age, students[min_index].sex, students[min_index].major, students[min_index].math, students[min_index].english, students[min_index].computer);
+	return 0} 
+

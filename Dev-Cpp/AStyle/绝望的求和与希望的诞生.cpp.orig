@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(void) {
+	int x,y,s=0;
+	scanf("%d%d",&x,&y);
+	for(; x<=y; x++) {
+		s=s+x;
+	}
+	printf("%d",s);
+return 0;
+}

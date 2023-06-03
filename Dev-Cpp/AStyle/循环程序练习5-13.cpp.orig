@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+int main(void){
+	int i,a,sum=0,c=0;
+	scanf("%d",&a);
+	for(i=1;;i++){
+		if(a>0){
+			c++;
+			sum+=pow(a%10,3);
+			a=a/10;
+		}
+		else{
+			break;
+		}
+	}
+	printf("sum=%d,count=%d",sum,c);
+	return 0;
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+int strcmp(char *p1,char *p2){
+	if(*p1==*p2)return 0;
+	else if(*p1>*p2)return 1;
+	else return 0;
+}
+int main(void) {
+	char a[81],b[81];
+	gets(a),gets(b);
+	int i;
+	char *pa=a,*pb=b;
+	for(i=0;*pa!='\0';i++,pa++,pb++){
+		if(strcmp(pa,pb)!=0)break;
+	}
+	printf("%d",*pa-*pb);
+	return 0;
+}

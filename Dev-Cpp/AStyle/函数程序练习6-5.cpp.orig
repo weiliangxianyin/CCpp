@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main(void){
+	double r,s;
+	scanf("%lf",&r);
+	s=3.14*r*r;
+	printf("%lf",s);
+	return 0;
+}
